@@ -18,7 +18,7 @@
         <div class="flex items-center">
             <img src="./assets/Group.png" alt="" class="h-[50px]">
             <div>
-                <h1 class="font-bold">$<span>45000</span></h1>
+                <h1 class="font-bold">$<span id="taka">45000</span></h1>
                 <p class="font-normal mt-[10px] text-[#08080880]">Available Balance</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <form action="" class="pl-10 mt-4">
                 <div class="mb-5">
                     <h1 class="font-semibold">Select A Bank</h1>
-                    <select class="px-2 py-1 pl-3 mt-2 w-full border-gray-300 select rounded-2xl text-[#08080880]">
+                    <select id="bank" class="px-2 py-1 pl-3 mt-2 w-full border-gray-300 select rounded-2xl text-[#08080880]">
                         <option disabled selected >Select Bank</option>
                         <option>Ab bank</option>
                         <option>IIFC Bank</option>
@@ -78,27 +78,27 @@
                 <div class="mb-5">
                 <label class="block mb-6">
                 <p class="mb-2 font-semibold">Bank Account Number</p>
-                <input type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="mobileNumber" placeholder="Enter 11 digit account number" />
+                <input id="Bank-accnumber" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 11 digit account number" />
             </label>
                 </div>
                 <div class="mb-5">
                 <label class="block mb-6">
                 <p class="mb-2 font-semibold">Amount to Add</p>
-                <input type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="mobileNumber" placeholder="Add Amount to withdraw" />
+                <input id="add-amound" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="AddMoney" placeholder="Add Amount to withdraw" />
             </label>
                 </div>
                 <div class="mb-5">
                 <label class="block mb-6">
                 <p class="mb-2 font-semibold">Pin Number</p>
-                <input type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="mobileNumber" placeholder="Enter 4 digit pin number" />
+                <input id="pin-number" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 4 digit pin number" />
             </label>
                 </div>
-                <button  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white" id="loginButton">Add Money</button>
+                <button id="AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Add Money</button>
             </form>
         </div>
     </div>
     
-    
+    <script src="./main.js"></script>
 </body>
 
 </html>
