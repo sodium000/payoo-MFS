@@ -11,6 +11,9 @@ document.getElementById("loginButton").addEventListener("click", function(e){
     const mobileNumberValue = parseInt(gotMobileNumber) 
     const pinNumberValue = parseInt(gotPin)
 
-    console.log(mobileNumberValue)
-    console.log(pinNumberValue)
+    if (mobileNumberValue===mobileNumber && pinNumberValue===pin) {
+        window.location.href = "./main.html"
+    }else{
+        alert("invalid user")
+    }
 })
