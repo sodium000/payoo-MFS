@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#f4f5f7] h-[100vh] flex flex-col  justify-center items-center">
+    <div class="h-[130px] w-[300px] border bg-[url(./assets/bg.png)] bg-cover flex  justify-center items-center ">
+        <img src="./assets/Group.png" alt="">
+    </div>
+    <div class="w-[350px] bg-[#ffffff]">
+        <form action="" class=" p-8 ">
+            <label class="block mb-6">
+                <p class="mb-2 font-bold">First Name:</p>
+                <input type="text" class="border border-gray-300 rounded-2xl px-2 py-1 pl-3 w-full " id="mobileNumber" placeholder="Enter your name" />
+            </label>
+
+            <label class="block mb-6">
+                <p class="mb-2 font-bold">4 digit pin</p>
+                <input type="text" class=" border border-gray-300 rounded-2xl px-2 py-1 pl-3 w-full " id="pin" placeholder="Enter your password" />
+            </label>
+            <button  class="btn bg-[#0874F2] w-full rounded-3xl text-white" id="loginButton">LogIn</button>
+        </form>
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
