@@ -33,12 +33,12 @@
     </div>
 
 
-    <div class="p-4 min-h-[200px] grid grid-cols-3  mt-2 gap-4">
-        <div class="p-3 text-center border border-gray-200 rounded-lg">
+    <div class="p-4 min-h-[200px] grid grid-cols-3  mt-2 gap-4" >
+        <div class="p-3 text-center border border-gray-200 rounded-lg" id="add-button">
             <img src="./assets/wallet1.png" alt="" class="mx-auto">
             <h2>Add Money</h2>
         </div>
-        <div class="p-3 text-center border border-gray-200 rounded-lg">
+        <div class="p-3 text-center border border-gray-200 rounded-lg" id="cashout-btn">
             <img src="./assets/send1.png" alt="" class="mx-auto">
             <h2>Cashout</h2>
         </div>
@@ -61,9 +61,9 @@
     </div>
     </div>
 
-    <div class="max-w-lg mx-auto pl-7 all-from-section">
+    <div class="max-w-lg mx-auto pl-7 all-from-section" id="addMoney" style="display: none;" >
         <!-- add money -->
-        <div>
+        <div >
             <h1 class="font-bold text-md">Add Money </h1>
             <form action="" class="pl-10 mt-4">
                 <div class="mb-5">
@@ -84,7 +84,7 @@
                 <div class="mb-5">
                 <label class="block mb-6">
                 <p class="mb-2 font-semibold">Amount to Add</p>
-                <input id="add-amound" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="AddMoney" placeholder="Add Amount to withdraw" />
+                <input id="add-amound" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="AddMoney" placeholder="Add Amount" />
             </label>
                 </div>
                 <div class="mb-5">
@@ -94,6 +94,35 @@
             </label>
                 </div>
                 <button id="AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Add Money</button>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="max-w-lg mx-auto pl-7 all-from-section" id="cashOut" style="display: none;">
+        <!-- cash out -->
+        <div>
+            <h1 class="font-bold text-md">Cashout</h1>
+            <form action="" class="pl-10 mt-4">
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">Agent Number</p>
+                <input id="Bank-accnumber" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 11 digit account number" />
+            </label>
+                </div>
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">Amount to Add</p>
+                <input id="add-amound" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="AddMoney" placeholder="Add Amount to withdraw" />
+            </label>
+                </div>
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">Pin Number</p>
+                <input id="pin-number" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 4 digit pin number" />
+            </label>
+                </div>
+                <button id="AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Withdraw Money</button>
             </form>
         </div>
     </div>

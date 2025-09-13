@@ -32,3 +32,16 @@
 
         
     });
+
+
+    document.getElementById("add-button").addEventListener("click", function() {
+        document.getElementById("cashOut").style.display = "none"
+        document.getElementById("addMoney").style.display = "block"
+    });
+    
+    document.getElementById("cashout-btn").addEventListener("click", function() {
+        document.getElementById("cashOut").style.display = "block"
+        document.getElementById("addMoney").style.display = "none"
+    });
+    
+  
