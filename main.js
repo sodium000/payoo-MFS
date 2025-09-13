@@ -2,6 +2,7 @@
 
     const addMoney = document.getElementById("AddMoney-btn")
 
+    const validpin = 1234;
     addMoney.addEventListener("click", function(e){
         e.preventDefault();
         // console.log("click add money button")
@@ -14,6 +15,16 @@
         const PinNumber = parseInt(document.getElementById("pin-number").value)
 
         const Taka =  parseInt (document.getElementById("taka").innerText)
+
+        if (BankaccountNumber.length !== 11 ) {
+            alert("Provide Valid account Number")
+            return;
+        }
+
+        if (PinNumber!==validpin) {
+            alert("please enter valid pin number")
+            return;
+        }
 
         const totalAmount = AddAmount + Taka
 
