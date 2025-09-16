@@ -42,7 +42,7 @@
             <img src="./assets/send1.png" alt="" class="mx-auto">
             <h2>Cashout</h2>
         </div>
-        <div class="p-3 text-center border border-gray-200 rounded-lg">
+        <div class="p-3 text-center border border-gray-200 rounded-lg" id="transfare">
             <img src="./assets/money1.png" alt="" class="mx-auto">
             <h2>Transfer Money </h2>
         </div>
@@ -61,7 +61,8 @@
     </div>
     </div>
 
-    <div class="max-w-lg mx-auto pl-7 all-from-section" id="addMoney" style="display: none;" >
+    <!-- style="display: none;" -->
+    <div class="max-w-lg mx-auto pl-7 all-from-section" id="addMoney"  > 
         <!-- add money -->
         <div >
             <h1 class="font-bold text-md">Add Money </h1>
@@ -93,15 +94,15 @@
                 <input id="pin-number" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 4 digit pin number" />
             </label>
                 </div>
-                <button id="AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Add Money</button>
+                <button  id="AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Add Money</button>
             </form>
         </div>
     </div>
 
 
-        <div class="max-w-lg mx-auto pl-7 all-from-section" id="cashOut" style="display: none;">
+        <!-- <div class="max-w-lg mx-auto pl-7 all-from-section" id="cashOut" style="display: none;"> -->
         <!-- cash out -->
-        <div>
+        <!-- <div>
             <h1 class="font-bold text-md">Cashout</h1>
             <form action="" class="pl-10 mt-4">
                 <div class="mb-5">
@@ -125,7 +126,36 @@
                 <button id="withdraw-money"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Withdraw Money</button>
             </form>
         </div>
-    </div>
+    </div> -->
+
+    
+        <!-- <div class="max-w-lg mx-auto pl-7 all-from-section" id="transaction1" style="display: none;" > -->
+        <!-- Transfer Money -->
+        <!-- <div>
+            <h1 class="font-bold text-md">Transfer Money</h1>
+            <form action="" class="pl-10 mt-4">
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">User Account Number</p>
+                <input id="Transfer-Bank" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 11 digit account number" />
+            </label>
+                </div>
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">Amount to Add</p>
+                <input id="Transfer-amound" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " id="AddMoney" placeholder="Add Amount to withdraw" />
+            </label>
+                </div>
+                <div class="mb-5">
+                <label class="block mb-6">
+                <p class="mb-2 font-semibold">Pin Number</p>
+                <input id="Transfer-pin-number" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 4 digit pin number" />
+            </label>
+                </div>
+                <button id="Transfer-money"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Transfer Money</button>
+            </form>
+        </div>
+    </div> -->
     
     <script src="./main.js"></script>
 </body>
