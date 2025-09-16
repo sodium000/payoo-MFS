@@ -63,6 +63,45 @@ Transfar.addEventListener("click", function(e){
     }
 });
 
+const bonous = document.getElementById("bonous-money")
+
+bonous.addEventListener("click", function(e){
+    e.preventDefault();
+
+    const agentBankaccountNumber = all("bonous-amound");
+
+    const Taka =  parseInt (document.getElementById("taka").innerText)
+
+
+    const totalAmount = agentBankaccountNumber + Taka
+
+    document.getElementById("taka").innerText = totalAmount
+
+
+});
+
+
+
+const payaddMoney = document.getElementById("pay-AddMoney-btn");
+payaddMoney.addEventListener("click", function(e){
+    e.preventDefault();
+    const Bank = document.getElementById("payBank").value
+
+    const BankaccountNumber = document.getElementById("pay-Bank-accnumber").value
+
+    const AddAmount = all("pay-add-amound");
+    const PinNumber = all("pay-pin-number");
+
+    const Taka =  parseInt (document.getElementById("taka").innerText)
+
+    validation(BankaccountNumber,PinNumber);
+
+    const totalAmount = Taka-AddAmount
+
+    document.getElementById("taka").innerText = totalAmount
+
+});
+
 function all(id) {
     return(parseInt(document.getElementById(id).value));
 }
@@ -102,6 +141,17 @@ document.getElementById("cashout-btn").addEventListener("click", function() {
 document.getElementById("transfare").addEventListener("click", function() {
     toggle()
     document.getElementById("transaction1").style.display = "block"
+});
+
+document.getElementById("getBonous").addEventListener("click", function() {
+    toggle()
+    document.getElementById("get-bonous").style.display = "block"
+});
+
+
+document.getElementById("paybill").addEventListener("click", function() {
+    toggle()
+    document.getElementById("paybills").style.display = "block"
 });
 
 
