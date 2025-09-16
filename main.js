@@ -79,20 +79,30 @@ function all(id) {
         }
     }
 
-// document.getElementById("add-button").addEventListener("click", function() {
-//     document.getElementById("cashOut").style.display = "none"
-//     document.getElementById("addMoney").style.display = "block"
-//     document.getElementById("transaction1").style.display = "none"
-// });
+    function toggle (){
+        const alltogClass = document.getElementsByClassName("tog");
+        for(let toggles of alltogClass){
+            toggles.style.display="none"
+        }
+    };
+    toggle();
 
-// document.getElementById("cashout-btn").addEventListener("click", function() {
-//     document.getElementById("cashOut").style.display = "block"
-//     document.getElementById("addMoney").style.display = "none"
-//     document.getElementById("transaction1").style.display = "none"
-// });
 
-// document.getElementById("transfare").addEventListener("click", function() {
-//     document.getElementById("cashOut").style.display = "none"
-//     document.getElementById("addMoney").style.display = "none"
-//     document.getElementById("transaction1").style.display = "block"
-// });
+
+document.getElementById("add-button").addEventListener("click", function() {
+    toggle()
+    document.getElementById("addMoney").style.display = "block"
+});
+
+document.getElementById("cashout-btn").addEventListener("click", function() {
+    toggle()
+    document.getElementById("cashOut").style.display = "block"
+});
+
+document.getElementById("transfare").addEventListener("click", function() {
+    toggle()
+    document.getElementById("transaction1").style.display = "block"
+});
+
+
+
