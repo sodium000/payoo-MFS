@@ -1,9 +1,13 @@
 
 
 
+// 1. Load existing data from localStorage
+let AllData = JSON.parse(localStorage.getItem("Data")) || [];
 
-    const AllData = [];
-    console.log(AllData);
+// 2. Save function (keeps everything)
+function savedata() {
+    return (localStorage.setItem("Data", JSON.stringify(AllData))) ;
+}
 
 const addMoney = document.getElementById("AddMoney-btn")
 addMoney.addEventListener("click", function(e){
@@ -27,6 +31,7 @@ addMoney.addEventListener("click", function(e){
         Name : "AddAmount",
         Date : new Date().toLocaleTimeString()
     })
+    savedata();
 
 });
 
@@ -43,8 +48,8 @@ withdraw.addEventListener("click", function(e){
 
     const Taka =  parseInt (document.getElementById("taka").innerText)
 
-    if (Taka>=withdrawAmount ) {
-    const totalAmount = Taka - withdrawAmount;
+    if (Taka>=AddAmount ) {
+    const totalAmount = Taka - AddAmount;
     document.getElementById("taka").innerText = totalAmount
     }else{
         alert("your amount is low")
@@ -54,6 +59,8 @@ withdraw.addEventListener("click", function(e){
         Name : "CashOut",
         Date : new Date().toLocaleTimeString()
     })
+    savedata();
+
 });
 
 const Transfar = document.getElementById("Transfer-money")
@@ -81,6 +88,9 @@ Transfar.addEventListener("click", function(e){
         Name : "Transfar Amaound",
         Date : new Date().toLocaleTimeString()
     })
+    savedata();
+    
+
 });
 
 const bonous = document.getElementById("bonous-money")
@@ -101,6 +111,9 @@ bonous.addEventListener("click", function(e){
         Name : "Get Bonous",
         Date : new Date().toLocaleTimeString()
     })
+
+    savedata();
+    
 });
 
 
@@ -127,6 +140,8 @@ payaddMoney.addEventListener("click", function(e){
         Name : "Pay Bill",
         Date : new Date().toLocaleTimeString()
     })
+    savedata();
+
 
 });
 
@@ -155,12 +170,14 @@ function all(id) {
     toggle();
 
     function allData (Data){
-        const mainDiv = document.getElementById("allData")
+        const mainDiv = document.getElementById("all")
+        mainDiv.innerHTML="";
 
         for(const data of Data){
             const div = document.createElement("div")
-            div.innerHTML=`<div class="flex items-center justify-between max-w-lg mx-auto rounded-md trans-bg" id="data">
-            <div class="flex items-center gap-2 mb-5">
+            div.innerHTML=`
+            <div class="flex items-center justify-between max-w-lg mx-auto rounded-md trans-bg" id="data">
+            <div class="flex items-center gap-2 ">
                 <img src="./assets/purse1.png" alt="" class="trans-img">
                 <div>
                     <h1 class="pt-1 mb-2 tren-h">${data.Name}</h1>
@@ -209,6 +226,5 @@ document.getElementById("trans").addEventListener("click", function() {
     document.getElementById("allData").style.display = "block"
     allData(AllData);
 });
-
 
 
