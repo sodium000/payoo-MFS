@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="./main.css">
 </head>
 
 <body class="bg-[#f4f5f7] h-[100vh]">
@@ -54,7 +56,7 @@
             <img src="./assets/purse1.png" alt="" class="mx-auto">
             <h2>Pay Bill</h2>
         </div>
-        <div class="p-3 text-center border border-gray-200 rounded-lg">
+        <div class="p-3 text-center border border-gray-200 rounded-lg" id="trans">
             <img src="./assets/transaction1.png " alt="" class="mx-auto">
             <h2>Transactions</h2>
         </div>
@@ -207,10 +209,34 @@
                 <input id="pay-pin-number" type="text" class="w-full px-2 py-1 pl-3 border border-gray-300 rounded-2xl " placeholder="Enter 4 digit pin number" />
             </label>
                 </div>
-                <button  id="pay-AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Add Money</button>
+                <button  id="pay-AddMoney-btn"  class=" mb-6 btn bg-[#0874F2] w-full rounded-3xl text-white">Paybill</button>
             </form>
         </div>
     </div>
+    </div>
+
+    <div class="tog" id="allData">
+        <div class="flex items-center justify-between max-w-lg mx-auto mb-9">
+            <h1 class="trans-header"> 
+                Transaction History
+            </h1>   
+            <p class="trans-p">
+                View All
+            </p>
+        </div>
+        
+        <!-- <div class="flex items-center justify-between max-w-lg mx-auto rounded-md trans-bg" id="data">
+            <div class="flex items-center gap-2">
+                <img src="./assets/purse1.png" alt="" class="trans-img">
+                <div>
+                    <h1 class="pt-1 mb-2 tren-h">Electricity Bill</h1>
+                    <p class="tren-time">Today 01:44 AM</p>
+                </div>
+            </div>
+            <div class="p-4 rotate-90">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>   
+        </div> -->
     </div>
     
     <script src="./main.js"></script>
